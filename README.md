@@ -10,8 +10,9 @@ $ go test -v  -u unixlinuxgeek  -r gopl-issues  -t <GITHUB_TOKEN>
 replace *unixlinuxgeek* to your account
 replace *gopl-issues to* your repository (with issues)
 
-### Run all unit tests:
-### Запуск  всех модульных тестов:
+Run all unit tests:
+
+Запуск  всех модульных тестов:
 
 ```bash
 $ go test -v  -u unixlinuxgeek -r gopl-issues -t <GITHUB_TOKEN> 
@@ -74,8 +75,9 @@ ok      github.com/unixlinuxgeek/issueedit      4.19
 ```
 
 
-### Running single unit test:
-### Запуск одиночных модульных тестов:
+Running single unit test:
+
+Запуск одиночных модульных тестов:
 
 The TestCreate creates an issue:
 
