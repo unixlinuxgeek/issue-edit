@@ -97,12 +97,23 @@ func Create(user, repo, tk string, issueReq *github.IssueRequest) error {
 	//is := &github.IssueRequest{
 	//	Title: github.String("test_issue_" + now.Format("2006-01-02_15:04")),
 	//}
-	iss, _, err := client.Issues.Create(context.TODO(), user, repo, issueReq)
+	issue, _, err := client.Issues.Create(context.TODO(), user, repo, issueReq)
 
 	if err != nil {
 		return err
 	}
-	fmt.Printf("issue state: %s, owner: %s, repo: %s\n", *iss.State, *usr, *rep)
+
+	if issue != nil {
+		fmt.Printf("issue number: %d\n", issue.Number)
+		fmt.Printf("issue id: %d\n", *issue.ID)
+		fmt.Printf("issue title: %d\n", issue.Title)
+		if issue.User.Name != nil {
+			fmt.Printf("issue user: %s\n", *issue.User.Name)
+		}
+		fmt.Printf("issue url: %s\n", *issue.URL)
+		fmt.Printf("issue state: %s\n", *issue.State)
+		fmt.Printf("issue labels: %v\n", issue.Labels)
+	}
 	return nil
 }
 
