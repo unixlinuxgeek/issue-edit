@@ -4,7 +4,7 @@
 Testing repository:
 ```bash
 $ git clone https://github.com/unixlinuxgeek/issue-edit
-$ cd gopl-issues
+$ cd issue-edit
 $ go test -v  -u unixlinuxgeek  -r gopl-issues  -t <GITHUB_TOKEN> 
 ```
 replace *unixlinuxgeek* to your account
